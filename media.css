@@ -1,4 +1,19 @@
 @media (max-width: 1280px) {
+  .buttons-sec-navbar {
+    display: none;
+  }
+  .login-navbar-wrapper {
+    display: flex;
+    justify-content: center;
+    width: clamp(10rem, 36.4223rem + -2.6502vw, 2.5rem);
+    padding: 0.4rem 3.4rem;
+  }
+  .login-navbar .login-navbar-wrapper .buttons-first-nav {
+    visibility: visible;
+  }
+}
+
+@media (max-width: 997px) {
   html {
     font-size: 15px;
   }
@@ -12,20 +27,94 @@
   }
   .gosi-navbar,
   .login-navbar {
-    display: none;
+    display: none !important;
   }
-  .cert-container{
+  .cert-container {
     display: flex;
     align-items: center;
     width: 100%;
   }
-  .sec-three{
-     margin-top: 10rem;
+  .sec-three {
+    margin-top: 10rem;
   }
-  .sec-four{
+  .sec-four {
     height: 20rem;
   }
-  .navbar-phone{
+  .navbar-phone {
     display: flex;
+  }
+  .sec-three {
+    background-color: rgb(229, 231, 234);
+    margin-top: 3rem;
+    color: var(--gosi-green);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-end;
+    padding-bottom: 2.2rem;
+    height: 9.5rem;
+  }
+  .main-text {
+    display: none;
+  }
+  .grey {
+    display: inline-block;
+    color: rgb(58, 54, 70);
+    font-size: 1.2rem;
+    
+    width: fit-content;
+    text-align: center;
+  }
+  .certi {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgba(241, 241, 241, 0.87);
+    
+    width: 85%;
+    border-radius: 1rem;
+    overflow: hidden;
+    
+  }
+  .right-side {
+    background-color: #00bf00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 0rem;
+    border-top-left-radius: 1rem;
+  }
+  .left-side {
+    padding: 1rem;
+  }
+
+  .left-side p {
+    padding-block: 0.7rem;
+  }
+  .left-side a {
+    margin-top: 0.6rem;
+  }
+  .sec-four {
+    height: 30rem
+  }
+
+}
+@media(max-width: 670px) {
+  .side-menu-wrapper .menu-container {
+  width: 100%;
+  max-width: 100dvw;
+}
+  
+}
+@media(max-width: 480px) {
+  * {
+    font-size: 14px !important;
+  }
+  .certi .right-side i{
+    font-size: 25px !important;
   }
 }
