@@ -9,9 +9,168 @@
       src="https://kit.fontawesome.com/a8c6bfc4af.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="media.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="media.css" />
   </head>
   <body>
+    <div class="side-menu-wrapper">
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="open-btn"> </label>
+      <div class="menu-overlay"></div>
+      <div class="menu-container">
+        <div class="menu-header">
+          <label for="menu-toggle" class="close-icon">
+            <i class="fa-solid fa-xmark"></i>
+          </label>
+          <div class="header-title">التأمينات الاجتماعية</div>
+          <div class="icon-grid-top">
+            <div class="icon-item">
+              <div class="icon-item-circle">
+                <i class="fa-regular fa-user"></i>
+              </div>
+              <span>تسجيل الدخول</span>
+            </div>
+            <div class="icon-item">
+              <div class="icon-item-circle">
+                <i class="fa-solid fa-house"></i>
+              </div>
+              <span>الرئيسية</span>
+            </div>
+          </div>
+
+          <div class="icon-grid-bottom">
+            <div class="icon-item">
+              <i class="fa-solid fa-universal-access"></i>
+              <span>إمكانية الوصول</span>
+            </div>
+
+            <div class="icon-item">
+              <i class="fa-solid fa-headset"></i>
+              <span>اتصل بنا</span>
+            </div>
+            <div class="icon-item">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>بحث</span>
+            </div>
+          </div>
+
+          <div class="language-select">
+            <i class="fa-solid fa-chevron-down"></i>
+            <span>Language</span>
+          </div>
+        </div>
+
+        <div class="menu-body">
+          <div class="languages">
+            <span class="ar">عربي</span>
+            <span class="en">English</span>
+          </div>
+          <ul class="menu-list">
+            <li class="has-submenu">
+              <input type="checkbox" id="submenu-1" />
+              <label for="submenu-1" class="menu-link">
+                <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                <span>عن المؤسسة</span>
+              </label>
+              <ul class="sub-menu">
+                <li>نبذة عامة</li>
+                <li>تاريخ المؤسسة</li>
+                <li>مجلس الإدارة</li>
+                <li>الهيكل التنظيمي</li>
+                <li>الإدارة التنفيذية</li>
+                <li>المشاركة الإلكترونية</li>
+                <li>التوظيف</li>
+                <li>اتصل بنا</li>
+                <li>البرامج والمبادرات</li>
+                <li>الأخبار والأحداث</li>
+                <li>السياسات والاستراتيجيات</li>
+                <li>الميزانية والمصروفات</li>
+                <li>المشتريات وبوابة الموردين</li>
+                <li>شركاء المؤسسة</li>
+                <li>التنمية المستدامة</li>
+                <li>رحلة العميل</li>
+              </ul>
+            </li>
+
+            <li class="has-submenu">
+              <input type="checkbox" id="submenu-2" />
+              <label for="submenu-2" class="menu-link">
+                <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                <span>الأنظمة واللوائح</span>
+              </label>
+              <ul class="sub-menu">
+                <li>نظام التأمينات الاجتماعية 1421 هـ</li>
+                <li>نظام التأمينات الاجتماعية 1445هـ</li>
+                <li>نظام التقاعد المدني</li>
+                <li>نظام التقاعد العسكري</li>
+                <li>نظام تبادل المنافع</li>
+                <li>نظام التأمين ضد التعطل عن العمل "ساند"</li>
+                <li>النظام الموحد لمد الحماية التأمينية</li>
+                <li>المستندات المطلوبة</li>
+                <li>المصطلحات</li>
+                <li>كتيبات الأنظمة</li>
+              </ul>
+            </li>
+
+            <li class="has-submenu">
+              <input type="checkbox" id="submenu-3" />
+              <label for="submenu-3" class="menu-link">
+                <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                <span>الخدمات</span>
+              </label>
+              <ul class="sub-menu">
+                <li>خدمات الأفراد</li>
+                <li>خدمات الأعمال</li>
+                <li>التحقق السريع</li>
+              </ul>
+            </li>
+
+            <li class="has-submenu">
+              <input type="checkbox" id="submenu-4" />
+              <label for="submenu-4" class="menu-link">
+                <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                <span>المركز الإعلامي</span>
+              </label>
+              <ul class="sub-menu">
+                <li>الأخبار</li>
+                <li>الفعاليات والأنشطة</li>
+                <li>المبادرات والشراكات</li>
+                <li>نشرات إعلامية</li>
+                <li>حملاتنا الإعلامية</li>
+                <li>الهوية البصرية</li>
+                <li>المؤتمرات والمعارض</li>
+              </ul>
+            </li>
+
+            <li class="has-submenu">
+              <input type="checkbox" id="submenu-5" />
+              <label for="submenu-5" class="menu-link">
+                <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                <span>إحصاءات وبيانات</span>
+              </label>
+              <ul class="sub-menu">
+                <li>البيانات المفتوحة</li>
+                <li>التقرير الإحصائي السنوي</li>
+                <li>النشرات الإحصائية</li>
+              </ul>
+            </li>
+
+            <li class="has-submenu">
+              <input type="checkbox" id="submenu-6" />
+              <label for="submenu-6" class="menu-link">
+                <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                <span>تقدير</span>
+              </label>
+              <ul class="sub-menu">
+                <li>نبذة عامة</li>
+                <li>المسارات</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <!-- ^ HEADER -->
     <div class="sticky">
       <header class="first-sec">
@@ -21,39 +180,32 @@
       <!-- ^ LOGIN-NAVBAR -->
 
       <header class="navbar-phone">
-    <div class="navbar-left">
-        <div class="hamburger-menu">
+        <div class="navbar-left">
+          <label for="menu-toggle" class="open-btn">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
+          </label>
+
+          <button class="login-button">تسجيل الدخول</button>
         </div>
-        
-        <button class="login-button">
-            تسجيل الدخول
-        </button>
-    </div>
-    
-    <div class="logo">
-        <span class="gosi-text">gosi</span>
-        <div class="logo-subtext">
-            التأمينات الاجتماعية
-            <br>
-            Social Insurance
+
+        <div class="logo">
+          <img src="./image/logo-black.png" alt="" />
         </div>
-    </div>
-</header>
+      </header>
 
       <div class="login-navbar">
         <div class="login-navbar-wrapper">
           <div class="nav-left">
-            <div class="icon-wrapper">
+            <div class="icon-wrapper-amin">
               <button class="help-amin">
                 <p>تحتاج مساعدة؟ اسأل أمين</p>
                 <div class="img-wrapper-amin"></div>
                 <img src="./image/ameen.png" alt="" />
               </button>
             </div>
-            <div class="icon-wrapper">
+            <div class="icon-wrapper" style="width: 4.2rem">
               <p>اتصل بنا</p>
               <i class="fa-solid fa-headphones"></i>
             </div>
@@ -61,7 +213,7 @@
               <p>Language</p>
               <i class="fa-solid fa-language"></i>
             </div>
-            <div class="icon-wrapper">
+            <div class="icon-wrapper" style="width: 7rem">
               <p>إمكانية الوصول</p>
               <i class="fa-solid fa-person"></i>
             </div>
@@ -71,11 +223,10 @@
             </div>
           </div>
 
-          <div class="nav-buttons">
-              <a href="#" class="btn btn-green">دخول الأفراد</a>
-              <a href="#" class="btn btn-blue">دخول الأعمال</a>
+          <div class="nav-buttons buttons-first-nav">
+            <a href="#" class="btn btn-green">دخول الأفراد</a>
+            <a href="#" class="btn btn-blue">دخول الأعمال</a>
           </div>
-
         </div>
       </div>
       <header class="gosi-navbar">
@@ -86,38 +237,117 @@
             </div>
             <nav class="main-nav-links">
               <ul class="nav-list">
-                <li class="nav-item has-dropdown"><a href="#">الرئيسية</a></li>
-                <li class="nav-item has-dropdown">
-                  <a href="#"
+                <li class="nav-item" style="width: 3rem">
+                  <a href="#" class="nav-text">الرئيسية</a>
+                </li>
+                <li class="nav-item has-dropdown" style="width: 5.7rem">
+                  <div class="menu-1">
+                    <ul class="grid about">
+                      <!-- الصف الأول  -->
+                      <li><a href="">نبذة عامة</a></li>
+                      <li><a href="">تاريخ المؤسسة</a></li>
+                      <li><a href="">مجلس الإدارة</a></li>
+                      <li><a href="">الهيكل التنظيمي</a></li>
+
+                      <!-- الصف الثاني  -->
+                      <li><a href="">الإدارة التنفيذية</a></li>
+                      <li><a href="">المشاركة الإلكترونية</a></li>
+                      <li><a href="">التوظيف</a></li>
+                      <li><a href="">اتصل بنا</a></li>
+
+                      <!-- الصف الثالث  -->
+                      <li><a href="">البرامج والمبادرات</a></li>
+                      <li><a href="">الأخبار والأحداث</a></li>
+                      <li><a href="">السياسات والاستراتيجيات</a></li>
+                      <li><a href="">الميزانية والمصروفات</a></li>
+
+                      <!-- الصف الرابع  -->
+                      <li><a href="">المشتريات وبوابة الموردين</a></li>
+                      <li><a href="">شركاء المؤسسة</a></li>
+                      <li><a href="">التنمية المستدامة</a></li>
+                      <li><a href="">رحلة العميل</a></li>
+                    </ul>
+                  </div>
+                  <a href="#" class="nav-text"
                     >عن المؤسسة <span class="dropdown-arrow"></span
                   ></a>
                 </li>
-                <li class="nav-item has-dropdown">
-                  <a href="#"
+                <li class="nav-item has-dropdown" style="width: 6.4rem">
+                  <div class="menu-2">
+                    <ul class="grid systems">
+                      <li><a href="">نظام التأمينات الاجتماعية 1445هـ</a></li>
+                      <li><a href="">نظام التأمينات الاجتماعية 1421هـ</a></li>
+                      <li><a href="">نظام التقاعد العسكري</a></li>
+                      <li><a href="">نظام التقاعد المدني</a></li>
+                      <li>
+                        <a href="">نظام التأمين ضد التعطل عن العمل "ساند"</a>
+                      </li>
+                      <li><a href="">نظام تبادل المنافع</a></li>
+                      <li><a href="">المستندات المطلوبة</a></li>
+                      <li>
+                        <a href="">النظام الموحد لمد الحماية التأمينية</a>
+                      </li>
+
+                      <li><a href="">كتيبات الأنظمة</a></li>
+                      <li><a href="">المصطلحات</a></li>
+                    </ul>
+                  </div>
+                  <a href="#" class="nav-text"
                     >الأنظمة واللوائح <span class="dropdown-arrow"></span
                   ></a>
                 </li>
                 <li class="nav-item has-dropdown">
-                  <a href="#">الخدمات <span class="dropdown-arrow"></span></a>
+                  <div class="menu-3">
+                    <ul class="grid services">
+                      <li><a href="">خدمات الأفراد</a></li>
+                      <li><a href="">خدمات الأعمال</a></li>
+                      <li><a href="">التحقق السريع</a></li>
+                    </ul>
+                  </div>
+                  <a href="#" class="nav-text">الخدمات <span class="dropdown-arrow"></span></a>
                 </li>
-                <li class="nav-item has-dropdown">
-                  <a href="#"
+                <li class="nav-item has-dropdown" style="width: 6.2rem">
+                  <div class="menu-4">
+                    <ul class="grid center">
+                      <li><a href="">الأخبار</a></li>
+                      <li><a href="">الفعاليات والأنشطة</a></li>
+                      <li><a href="">المبادرات والشراكات</a></li>
+                      <li><a href="">نشرات إعلامية</a></li>
+                      <li><a href="">حملاتنا الإعلامية</a></li>
+                      <li><a href="">الهوية البصرية</a></li>
+                      <li><a href="">المؤتمرات والمعارض</a></li>
+                    </ul>
+                  </div>
+                  <a href="#" class="nav-text"
                     >المركز الإعلامي <span class="dropdown-arrow"></span
                   ></a>
                 </li>
-                <li class="nav-item has-dropdown">
-                  <a href="#"
+                <li class="nav-item has-dropdown" style="width: 7rem">
+                  <div class="menu-5">
+                    <ul class="grid services">
+                      <li><a href="">البيانات المفتوحة</a></li>
+                      <li><a href="">التقرير الإحصائي السنوي</a></li>
+                      <li><a href="">النشرات الإحصائية</a></li>
+                    </ul>
+                  </div>
+                  <a href="#" class="nav-text"
                     >إحصاءات وبيانات <span class="dropdown-arrow"></span
                   ></a>
                 </li>
                 <li class="nav-item has-dropdown">
-                  <a href="#">تقدير <span class="dropdown-arrow"></span></a>
+                  <div class="menu-6">
+                    <ul class="grid appre">
+                      <li><a href="">نبذة عامة</a></li>
+                      <li><a href="">المسارات</a></li>
+                    </ul>
+                  </div>
+                  <a href="#" class="nav-text">تقدير <span class="dropdown-arrow"></span></a>
                 </li>
               </ul>
             </nav>
           </div>
           <div class="left">
-            <div class="nav-buttons">
+            <div class="nav-buttons buttons-sec-navbar">
               <a href="#" class="btn btn-green">دخول الأفراد</a>
               <a href="#" class="btn btn-blue">دخول الأعمال</a>
             </div>
@@ -125,23 +355,25 @@
         </div>
       </header>
     </div>
+
     <div class="sec-three">
       <div class="container">
-        <p>الرئيسية</p>
+        <p class="main-text">الرئيسية</p>
+        <p class="grey">تم التحقق من صحة الشهادة الإلكترونية</p>
       </div>
     </div>
     <div class="sec-four">
       <div class="container cert-container">
         <section class="certi">
+          <div class="right-side">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
           <div class="left-side">
             <div class="text">
               <p>تم التحقق من الشهادة وهي صالحة و سارية المفعول</p>
               <hr />
             </div>
             <a href="المدد و اجور.pdf" download>تنزيل نسخة من الشهادة</a>
-          </div>
-          <div class="right-side">
-            <i class="fa-solid fa-circle-check"></i>
           </div>
         </section>
       </div>
@@ -223,14 +455,11 @@
             </li>
             <li><a href="#">منصة البيانات المفتوحة</a></li>
           </ul>
-
           <div class="update-date">
             <p>تاريخ آخر تحديث للبيانات</p>
             <span>07-21-2025</span>
           </div>
         </div>
-
-        <!-- العمود الرابع -->
       </div>
     </section>
     <div class="footer-bottom">
@@ -238,14 +467,13 @@
         <p>جميع الحقوق محفوظة للمؤسسة العامة للتأمينات الاجتماعية © 2025</p>
       </div>
     </div>
-
     <div class="ameen-icon-container">
-    <div class="ameen-image-wrapper">
-        <img src="./image/ameen.png" alt="Ameen" class="ameen-image">
+      
+      <div class="ameen-image-wrapper">
+        <img src="./image/ameen.png" alt="Ameen" class="ameen-image" />
+      </div>
+      <span>اسأل أمين</span>
+      <div class="ameen-speech-bubble">اسأل أمين</div>
     </div>
-    <div class="ameen-speech-bubble">
-        اسأل أمين
-    </div>
-</div>
   </body>
 </html>
