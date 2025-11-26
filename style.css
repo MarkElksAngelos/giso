@@ -71,6 +71,10 @@
   cursor: pointer;
 }
 
+html {
+  interpolate-size: allow-keywords;
+}
+
 header p {
   direction: rtl;
   font-family: PingAR-LT, sans-serif;
@@ -109,26 +113,28 @@ header button {
   display: flex;
   justify-content: center;
 }
+.login-navbar .login-navbar-wrapper .buttons-first-nav {
+  visibility: hidden;
+}
 .login-navbar-wrapper {
   display: flex;
-  gap: 2rem;
-  width: 67%;
+  justify-content: center;
+  gap: 40%;
   padding: 0.4rem 3.4rem;
-  align-items: center;
-  justify-content: space-between;
 }
-.login-navbar-wrapper .nav-buttons{
-    visibility: hidden;
+.login-navbar-wrapper .nav-buttons {
+  visibility: visible;
 }
-.nav-left{
-    display: flex;
-    gap: 2rem;
+.nav-left {
+  display: flex;
+  gap: 2.1rem;
 }
 .icon-wrapper {
   color: rgb(255, 255, 255);
   display: flex;
   gap: 0.3rem;
   align-items: center;
+  justify-content: center;
 }
 .icon-wrapper:hover {
   color: #00bf00;
@@ -136,8 +142,10 @@ header button {
 }
 .icon-wrapper p {
   font-size: 0.8rem;
+
+  text-align: right;
 }
-.icon-wrapper button {
+.icon-wrapper-amin button {
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -156,7 +164,7 @@ header button {
   height: 1.7rem;
 }
 
-.icon-wrapper .help-amin img {
+.icon-wrapper-amin .help-amin img {
   height: 2rem;
   width: 2rem;
   background-color: white;
@@ -179,7 +187,10 @@ header button {
   padding: 10px 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   direction: rtl; /* دعم اللغة العربية */
-  font-family: "Arial", sans-serif; /* استخدم خطًا مناسبًا */
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center !important;
+  margin: auto;
 }
 .container {
   width: 67%;
@@ -188,7 +199,8 @@ header button {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10rem;
 }
 .left {
   display: flex;
@@ -207,6 +219,8 @@ header button {
 .gosi-logo {
   height: 4rem;
   width: auto;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 1;
 }
 
 .logo-text {
@@ -233,17 +247,21 @@ header button {
   padding: 0;
   margin: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .nav-item {
-  padding: 0 10px;
   position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-item a {
   text-decoration: none;
-  color: var(--text-color);
   font-size: 14px;
+  color: rgb(0, 0, 80);
   display: flex;
   align-items: center;
   transition: color 0.3s;
@@ -273,13 +291,13 @@ header button {
 .btn {
   text-decoration: none;
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 0.5rem 0.1rem;
+  border-radius: 0.4rem;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 0.8rem;
+  width: 6.5rem;
   transition: background-color 0.3s;
   text-align: center;
-  min-width: 120px;
 }
 
 .btn-blue {
@@ -292,6 +310,7 @@ header button {
 
 .btn-green {
   background-color: var(--gosi-green);
+  color: black;
 }
 
 .btn-green:hover {
@@ -300,7 +319,7 @@ header button {
 /* SEC 3 */
 .sec-three {
   background-color: rgb(229, 231, 234);
-  margin-top: 12.5rem;
+  margin-top: 9.4rem;
   color: var(--gosi-green);
   font-weight: 700;
   display: flex;
@@ -312,6 +331,9 @@ header button {
 .sec-three p {
   padding-right: 0.7rem;
 }
+.grey {
+  display: none;
+}
 /* SEC FOUR */
 .sec-four {
   display: flex;
@@ -320,14 +342,15 @@ header button {
   flex-direction: column;
   justify-content: flex-start;
   padding: 5rem 0 0 0;
-  gap: 3rem
+  gap: 3rem;
 }
 .certi {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  text-align: right;
+  direction: rtl;
   background-color: rgba(241, 241, 241, 0.87);
-  height: 7.5rem;
   width: 85%;
   border-radius: 1rem;
 }
@@ -349,12 +372,12 @@ header button {
   color: #fff;
 }
 .left-side {
-  width: 100%;
+  width: 95%;
   text-align: right;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-right: 1rem;
+  padding: 1rem;
 }
 .left-side a {
   background-color: #4ccb4c;
@@ -366,11 +389,13 @@ header button {
   text-align: center;
   border: none;
   cursor: pointer;
-  width: 13rem;
-  align-self: flex-end;
+  width: 11rem;
+  align-self: flex-start;
+  justify-self: center;
   transition: 0.2s ease-in-out;
   text-decoration: none;
 }
+
 .left-side button:hover {
   background-color: #91ec91;
 }
@@ -381,12 +406,13 @@ header button {
 }
 hr {
   opacity: 0.2;
+  margin-block: 0.5rem;
 }
 .back-button {
   padding: 0.5rem 0.8rem;
   border-radius: 0.5rem;
-  background-color: #99E699; 
-  color: #FFFFFF;      
+  background-color: #99e699;
+  color: #ffffff;
   font-size: 0.9rem;
   font-weight: bold;
   text-align: center;
@@ -396,7 +422,7 @@ hr {
 }
 
 .back-button:hover {
-  background-color: #7DC87D;
+  background-color: #7dc87d;
 }
 /* ^ SEC FIVE */
 .sec-five {
@@ -460,8 +486,8 @@ hr {
   width: 100%;
   height: 2px;
 }
-.footer-col i{
-    color: #00bf00;
+.footer-col i {
+  color: #00bf00;
 }
 
 .update-date {
@@ -487,7 +513,7 @@ hr {
 }
 
 .hotline {
-  font-size: 14px;
+  font-size: 1rem;
   color: #333;
 }
 
@@ -508,9 +534,9 @@ hr {
   margin: 0 5px;
   transition: color 0.3s;
 }
-.social-icons a i{
-    color: #000058;
-    font-size: 1.7rem;
+.social-icons a i {
+  color: #000058;
+  font-size: 1.7rem;
 }
 
 .social-icons a:hover {
@@ -545,8 +571,8 @@ hr {
   width: 110px;
   margin: 5px;
 }
-.verify{
-    width:100%
+.verify {
+  width: 100%;
 }
 .footer-bottom {
   background-color: #000058; /* نفس اللون الأزرق الغامق */
@@ -558,7 +584,6 @@ hr {
   direction: rtl;
   display: flex;
   justify-content: center;
-
 }
 
 .footer-bottom p {
@@ -566,122 +591,563 @@ hr {
   line-height: 1.6;
   width: fit-content;
 }
-/* --- 1. Main Navbar Container --- */
+
 .navbar-phone {
-    /* Layout using Flexbox */
-    display: none;
-    justify-content: space-between; /* Pushes content to the edges */
-    align-items: center; /* Vertically center items */
-    
-    /* Colors and Sizing */
-    background-color: #151515; /* Dark Navy Blue */
-    color: #FFFFFF; /* Default text color (for logo) */
-    padding: 15px 20px;
-    height: 70px; /* Example height */
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #030e4e;
+  color: #ffffff;
+  padding: 15px 20px;
+  height: 70px;
 }
 
-/* Groups the menu and button on the left */
 .navbar-left {
-    display: flex;
-    align-items: center;
-    gap: 20px; /* Space between menu and button */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ameen-icon-container:hover {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 15rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  border-radius: 3rem;
+  z-index: 1000;
+  background-color: #33cc00;
+  cursor: pointer;
+  overflow: hidden;
+}
+.ameen-icon-container:hover .ameen-image-wrapper{
+  width: 50%;
+  background-color: transparent;
+}
+.ameen-icon-container:hover .ameen-speech-bubble{
+  display: none;
+}
+.ameen-icon-container:hover .ameen-image-wrapper .ameen-image{
+  border-radius: 0;
+}
+.ameen-icon-container:hover span {
+  color: #000058;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  z-index: 1000;
 }
 
 .ameen-icon-container {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    width: 150px;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 4.5rem;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  
+  border-radius: 3rem;
+  z-index: 1000;
+  background-color: #33cc00;
+  transition: width 0.2s ease-in-out;
+}
+.ameen-icon-container span{
+  color:#000058;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: none;
 }
 
 .ameen-image-wrapper {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 5px solid #33CC00;
-    overflow: hidden;
-    z-index: 1;
-    left: 0;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 1000;
+  height: 4rem;
+  z-index: 1;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .ameen-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  border-radius: 50%;
+  z-index: 1000;
 }
+
 
 .ameen-speech-bubble {
-    position: absolute;
-    background-color: #192A56;
-    color: #FFFFFF;
-    padding: 8px 15px;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    white-space: nowrap;
-    right: -60px; 
-    top: 20%;
-    transform: translateY(-50%);
-    z-index: 0;
+  position: absolute;
+  background-color: #192a56;
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem 0rem 1rem 0rem;
+  font-size: 1rem;
+  font-weight: bold;
+  white-space: nowrap;
+  right: -6.2rem;
+  top: 10%;
+  transform: translateY(-50%);
+  z-index: 999;
 }
 
-/* --- 2. Login Button Styles (تسجيل الدخول) --- */
 .login-button {
-    /* Button appearance */
-    background-color: #33CC00; /* Bright Green */
-    color: #103554; /* Dark Blue Text */
-    padding: 8px 15px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    
-    /* Text/Font */
-    font-size: 16px;
-    font-weight: bold;
-    white-space: nowrap; /* Prevents text from wrapping */
+  /* Button appearance */
+  background-color: #33cc00; /* Bright Green */
+  color: #103554; /* Dark Blue Text */
+  padding: 0.5rem 0.4rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  white-space: nowrap; /* Prevents text from wrapping */
 }
 
 /* --- 3. Hamburger Menu Icon Styles --- */
-.hamburger-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    cursor: pointer;
+.hamburger-menu,
+.open-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
 }
 
-.hamburger-menu .line {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #FFFFFF; /* White lines */
+.line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff; /* White lines */
 }
 
 /* --- 4. Logo Styles (GOSI) --- */
 .logo {
-    display: flex;
-    align-items: center;
-    direction: ltr; /* Ensure GOSI and English text are left-to-right */
-    text-align: right; /* Align logo stack to the right */
+  display: flex;
+  align-items: center;
+  direction: ltr; /* Ensure GOSI and English text are left-to-right */
+  text-align: right; /* Align logo stack to the right */
 }
 
 .gosi-text {
-    font-size: 28px;
-    font-weight: 900; /* Extra bold */
-    margin-right: 5px;
+  font-size: 28px;
+  font-weight: 900; /* Extra bold */
+  margin-right: 5px;
 }
 
 .logo-subtext {
-    font-size: 10px;
-    line-height: 1.2;
+  font-size: 10px;
+  line-height: 1.2;
 }
 
+.side-menu-wrapper .menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 10;
+}
+
+.side-menu-wrapper .menu-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: auto;
+  width: 100%;
+  max-width: 22rem;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -0.125rem 0 0.625rem rgba(0, 0, 0, 0.2); /* (تعديل) عكس الظل ليكون ناحية اليسار */
+  transform: translateX(100%); /* (تعديل) القائمة تبدأ مخفية ناحية اليمين */
+  transition: transform 0.4s ease-in-out;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.side-menu-wrapper input[type="checkbox"]:checked ~ .menu-container {
+  transform: translateX(0); /* العودة لمكانها الطبيعي */
+}
+
+.side-menu-wrapper input[type="checkbox"]:checked ~ .menu-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-header {
+  background-color: #061255;
+  color: white;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.close-icon {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+.header-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+}
+
+.icon-grid-top {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.icon-item i {
+  font-size: 1.5rem !important;
+  margin-bottom: 0.25rem;
+}
+
+.icon-item span {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.icon-item-circle {
+  width: 3rem;
+  height: 3rem;
+  border: 0.125rem solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+}
+
+.icon-grid-bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.language-select {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.menu-body {
+  background-color: white;
+  
+  flex: 1;
+}
+.languages {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+}
+.languages span {
+  height: 2rem;
+  text-align: right;
+  padding: 0.75rem;
+  border: solid gray 0.1rem;
+  border-collapse: collapse;
+  height: 100%;
+}
+.ar {
+  background-color: #b3f0b3;
+  border-bottom: solid #b3f0b3 0.1rem !important;
+}
+.en {
+  background-color: rgb(230, 230, 230);
+}
+.menu-list {
+  list-style: none;
+}
+
+.menu-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  color: #555;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.menu-list li:hover {
+  background-color: #f9f9f9;
+  color: #030e4e;
+}
+
+.menu-list li i {
+  color: #777;
+  font-size: 0.875rem;
+}
+
+::-webkit-scrollbar {
+  width: 0.375rem;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 0.25rem;
+}
+
+.menu-list li {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.menu-list li > span,
+.menu-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* إلغاء ظهور الشيك بوكس */
+.has-submenu input[type="checkbox"] {
+  display: none;
+}
+
+/* تنسيق القائمة الفرعية */
+.sub-menu {
+  list-style: none;
+  background-color: #f5f5f5; /* لون الخلفية الرمادي الفاتح */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+
+.sub-menu li {
+  padding: 0.8rem 2rem 0.8rem 1.5rem;
+  font-size: 0.85rem;
+  color: #333;
+  border-bottom: none;
+  justify-content: flex-start;
+  font-weight: 600;
+}
+
+.sub-menu li:hover {
+  background-color: #e0e0e0;
+  color: #030e4e;
+}
+
+/* حركة الفتح عند الضغط */
+.has-submenu input:checked ~ .sub-menu {
+  max-height: 62rem;
+  transition: max-height 0.6s ease-in;
+}
+
+.arrow-icon {
+  transition: transform 0.3s;
+}
+
+.has-submenu input:checked ~ .menu-link .arrow-icon {
+  transform: rotate(180deg);
+}
+
+.menu-list > li:not(.has-submenu) {
+  flex-direction: row;
+  padding: 1rem 1.5rem;
+}
+.has-submenu label span {
+  padding: 15px;
+}
+.menu-link i {
+  margin-left: 15px;
+}
+.logo img {
+  height: 15rem;
+  cursor: pointer;
+}
+.text p {
+  width: fit-content;
+  padding: 0.5rem;
+}
+/* DropDown */
+@keyframes dropBounce {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    transform: scaleY(0.000001);
+    transform-origin: top;
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 15px, 0) scaleY(0.9);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0) scaleY(0.95);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0) scaleY(0.985);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0) scaleY(1);
+  }
+}
+
+.nav-item {
+  position: relative;
+}
+
+.menu-1,
+.menu-2,
+.menu-3,
+.menu-4,
+.menu-5,
+.menu-6 {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  height: 0px;
+  background: #ffffff;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1),
+    opacity 0.24s ease;
+  z-index: 20;
+  box-shadow: #00000023 0px 0px 10px 5px;
+  border-radius: 0.7rem;
+}
+
+.menu-1::before,
+.menu-2::before,
+.menu-3::before,
+.menu-4::before,
+.menu-5::before,
+.menu-6::before {
+  position: absolute;
+  content: " ";
+  background: #ffffff;
+  top: -0.5rem;
+  right: 0.8rem;
+  width: 1rem;
+  height: 1rem;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.menu-1.show,
+.menu-2.show,
+.menu-3.show,
+.menu-4.show,
+.menu-5.show,
+.menu-6.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  pointer-events: auto;
+  animation: dropBounce 0.5s;
+  height: auto;
+}
+
+.menu-1::after,
+.menu-2::after,
+.menu-3::after,
+.menu-4::after,
+.menu-5::after,
+.menu-6::after {
+  content: "";
+  position: absolute;
+  top: -33px;
+  right: 0;
+  width: 70%;
+  height: 40px;
+  background: transparent;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.center {
+  grid-template-columns: repeat(2, 9rem);
+}
+.grid {
+  list-style: none;
+  margin: 0;
+  display: grid;
+  text-align: right;
+}
+.about {
+  grid-template-columns: repeat(4, 11.5rem);
+}
+.systems {
+  grid-template-columns: repeat(2, 17.5rem);
+}
+.services {
+  grid-template-columns: 12.5rem;
+}
+.appre {
+  grid-template-columns: 8.5rem;
+}
+
+.grid li{
+  font-size: 1rem;
+  color: #0f1d77;
+  font-weight: bold;
+  padding-block: 1.3rem;
+  padding-right: 1rem;
+  transition: 0.2s ease-in-out;
+}
+.grid li a:hover {
+  color: #0e1b72;
+}
+.grid li:hover {
+  background-color: #ccc;
+}
